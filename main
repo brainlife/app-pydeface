@@ -6,4 +6,4 @@ mkdir -p output
 
 t1=$(jq -r .t1 config.json)
 
-time singularity exec -e docker://brainlife/pydeface:1.0 pydeface $t1 --force --outfile output/t1.nii.gz --verbose
+time singularity exec -e docker://brainlife/pydeface:2.0 pydeface $t1 --force --outfile output/t1.nii.gz --verbose
