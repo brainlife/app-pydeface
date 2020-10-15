@@ -42,7 +42,7 @@ You can submit this App online at [https://doi.org/10.25663/bl.app.388](https://
 ```json
 {
         "t1": "./input/anat/t1.nii.gz",
-	      "cost": "mutualinfo"
+        "cost": "mutualinfo"
 }
 ```
 
