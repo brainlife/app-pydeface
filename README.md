@@ -26,6 +26,8 @@ We kindly ask that you cite the following articles when publishing papers and co
 
 2. M. Jenkinson and S.M. Smith. A global optimisation method for robust affine registration of brain images. Medical Image Analysis, 5(2):143-156, 2001. https://doi.org/10.1016/S1361-8415(01)00036-6
 
+3. Avesani, P., McPherson, B., Hayashi, S. et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. Sci Data 6, 69 (2019). [https://doi.org/10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
+
 ## Running the App 
 
 ### On Brainlife.io
