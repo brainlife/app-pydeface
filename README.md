@@ -10,9 +10,9 @@
   <a href="https://github.com/brainlife/app-pydeface/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="MIT license"></a>
 </p>
 
-> 📍 **This branch, `2.0-1`, is the brainlife.io App pydeface** ([doi:10.25663/brainlife.app.388](https://doi.org/10.25663/brainlife.app.388)).
+> **This branch, `2.0-1`, is the brainlife.io App pydeface** ([doi:10.25663/brainlife.app.388](https://doi.org/10.25663/brainlife.app.388)).
 
-## 🧠 At a glance
+## At a glance
 
 <!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
 
@@ -22,26 +22,26 @@ Runs pydeface 2.0 on the T1w image, registering a face mask template with FSL fl
 
 | | |
 |---|---|
-| 📥 **Inputs** | `neuro/anat/t1w` |
-| 📤 **Outputs** | `neuro/anat/t1w` |
-| 🐳 **Container** | `brainlife/pydeface:2.0` |
-| ⚙️ **Resources** | 8 CPUs · 32 GB memory · 14 h walltime |
-| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.388](https://doi.org/10.25663/brainlife.app.388) |
+| **Inputs** | `neuro/anat/t1w` |
+| **Outputs** | `neuro/anat/t1w` |
+| **Container** | `brainlife/pydeface:2.0` |
+| **Resources** | 8 CPUs · 32 GB memory · 14 h walltime |
+| **Run it** | [doi.org/10.25663/brainlife.app.388](https://doi.org/10.25663/brainlife.app.388) |
 
-#### 📥 Inputs
+#### Inputs
 
 | Input | Datatype | Required | Description |
 |---|---|---|---|
 | `t1` | `neuro/anat/t1w` (!defaced) | yes | T1 anatomical image to deface |
 
-#### 📤 Outputs
+#### Outputs
 
 | Output | Datatype | Description |
 |---|---|---|
 | `output` | `neuro/anat/t1w` | T1 anatomical image defaced |
 
 <details>
-<summary><b>⚙️ Parameters</b> (1)</summary>
+<summary><b>Parameters</b> (1)</summary>
 
 | Parameter | Type | Default | Description |
 |---|---|---|---|
@@ -51,15 +51,15 @@ Runs pydeface 2.0 on the T1w image, registering a face mask template with FSL fl
 
 <!-- brainlife-app:end -->
 
-## 🚀 Running the App
+## Running the App
 
-### ☁️ On brainlife.io
+### On brainlife.io
 
 Open the App at [doi.org/10.25663/brainlife.app.388](https://doi.org/10.25663/brainlife.app.388), choose a T1-weighted dataset that is not yet tagged `defaced`, pick the FLIRT cost function and press **Execute**. The result is a `neuro/anat/t1w` dataset tagged `defaced`, archived to your project. Defacing is generally used to de-identify anatomical data before sharing it.
 
 [pydeface](https://github.com/poldracklab/pydeface) registers a face mask template to the T1-weighted image with FSL FLIRT, using the cost function you choose (`cost`, default `mutualinfo`; also `corratio`, `normcorr`, `normmi`, `leastsq`, `labeldiff` or `bbr`), and zeroes the voxels inside the face region.
 
-### 💻 Locally
+### Locally
 
 You need [Singularity/Apptainer](https://apptainer.org/) and [`jq`](https://jqlang.github.io/jq/). pydeface 2.0 and FSL FLIRT run inside the `brainlife/pydeface:2.0` container (built from the `Dockerfile` in this repository).
 
@@ -79,18 +79,18 @@ You need [Singularity/Apptainer](https://apptainer.org/) and [`jq`](https://jqla
    ./main
    ```
 
-## 📦 Outputs
+## Outputs
 
 ```text
 output/
 └── t1.nii.gz   defaced T1-weighted image
 ```
 
-## 🩺 Troubleshooting
+## Troubleshooting
 
 - **Face not fully removed, or brain tissue cut away**: the template registration failed. Always inspect the result, and rerun with another `cost` function.
 
-## 📚 Citing
+## Citing
 
 > [!TIP]
 > If you use this App in your work, please cite the App, the software it builds on and brainlife.io (below). GitHub's **Cite this repository** button gives the App citation in APA and BibTeX.
@@ -102,11 +102,11 @@ output/
 - Hayashi S, Caron BA, Heinsfeld AS, et al. brainlife.io: a decentralized and open-source cloud platform to support neuroscience research. *Nature Methods* 21:809–813 (2024). [doi:10.1038/s41592-024-02237-2](https://doi.org/10.1038/s41592-024-02237-2)
 - Avesani P, McPherson B, Hayashi S, et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. *Scientific Data* 6:69 (2019). [doi:10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
 
-## 👥 Authors
+## Authors
 
 - Soichi Hayashi
 
-## 💰 Funding
+## Funding
 
 [![Wellcome-226486/Z/22/Z](https://img.shields.io/badge/Wellcome-226486%2FZ%2F22%2FZ-purple.svg)](https://wellcome.org/)
 [![NIH-NINDS-U24NS140384](https://img.shields.io/badge/NIH_NINDS-U24NS140384-green.svg)](https://reporter.nih.gov/project-details/11261037)
@@ -125,6 +125,6 @@ output/
 
 <sub>brainlife.io is publicly funded, and acknowledging that support helps keep it running. This App was developed with support from Wellcome, the U.S. National Institutes of Health (including the BRAIN Initiative BRAIN CONNECTS program: The Axonal Projectome EXchange, U24NS140384, and the Center for Mesoscale Connectomics, UM1NS132207) and the U.S. National Science Foundation.</sub>
 
-## ⚖️ License
+## License
 
 [MIT](https://github.com/brainlife/app-pydeface/blob/master/LICENSE). pydeface and FSL are distributed under their own licenses ([pydeface](https://github.com/poldracklab/pydeface), [FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Licence)).
